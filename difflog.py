@@ -299,7 +299,6 @@ class DiffLog(object):
 
     def eval_rules_initial(self):
         for i in range(len(self.rules)):
-            print self.rules[i]
             self.eval_rule_initial(self.rules[i], i)
 
     def relations_equal(self, rs):

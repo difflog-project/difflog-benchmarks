@@ -1,7 +1,7 @@
 import importlib
 from difflog import DiffLog
 
-tests = ['ancestor', 'andersen', 'animals', 'callsite_1' 'escape', 'knights_move', 'path', 'polysite', 'sgen']
+tests = ['ancestor', 'andersen', 'animals', 'callsite_1', 'escape', 'knights_move', 'path', 'polysite', 'sgen']
 
 broken = ['modref']
 
@@ -49,6 +49,10 @@ def test_module(s):
                 print idb[x]
                 print x
                 print edb
+                assert(False)
+
+        for t in d.valuation[x]:
+            if t not in idb[x]:
                 assert(False)
 
     # compare result and edb
